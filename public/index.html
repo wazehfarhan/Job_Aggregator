@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Aggregator - Find Jobs in Bangladesh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 Job Aggregator</h1>
+      <p>Find jobs from BDJobs and Indeed in one place</p>
+    </header>
+
+    <div class="search-section">
+      <div class="filters">
+        <input
+          type="text"
+          id="keyword"
+          placeholder="Search by job title (e.g., Web Developer)"
+          class="input-field"
+        >
+
+        <select id="location" class="input-field">
+          <option value="">All Locations</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Chittagong">Chittagong</option>
+          <option value="Sylhet">Sylhet</option>
+          <option value="Khulna">Khulna</option>
+          <option value="Remote">Remote</option>
+        </select>
+
+        <select id="jobType" class="input-field">
+          <option value="">All Job Types</option>
+          <option value="full-time">Full Time</option>
+          <option value="part-time">Part Time</option>
+          <option value="contract">Contract</option>
+          <option value="internship">Internship</option>
+          <option value="remote">Remote</option>
+        </select>
+
+        <select id="source" class="input-field">
+          <option value="">All Sources</option>
+          <option value="bdjobs">BDJobs</option>
+          <option value="indeed">Indeed</option>
+        </select>
+
+        <button id="searchBtn" class="btn-search">Search</button>
+        <button id="scrapeBtn" class="btn-scrape">Scrape Latest Jobs</button>
+      </div>
+    </div>
+
+    <div class="results-section">
+      <div id="loading" class="loading hidden">Loading jobs...</div>
+      <div id="results" class="job-list"></div>
+      <div id="noResults" class="no-results hidden">No jobs found. Try adjusting your filters.</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
